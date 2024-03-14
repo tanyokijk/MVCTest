@@ -1,0 +1,13 @@
+﻿@model MVC.ViewModels.RemoveCarViewModel
+
+<h2>Видалити автомобіль</h2>
+
+<form asp-action="Delete" method="post">
+    <div class="form-group">
+        <label asp-for="CarName" class="control-label">Назва для видалення</label>
+        <input asp-for="CarName" class="form-control" />
+        <span asp-validation-for="CarName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-danger">Видалити</button>
+    <a asp-action="List">Скасувати</a>
+</form>
